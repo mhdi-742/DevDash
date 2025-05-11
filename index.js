@@ -7,13 +7,30 @@ function sendContactEmail(event) {
         message: message.value,
         phone: phone.value,
     };
-    const s=toString(formData.phone);
-    if(s.length!=10)
-    {
-        alert("10 digit no pls");
-    }
     
     //Validation logic
-
+    if(isValidPhoneNumber(formData.phone))
+    {
+        console.log("TRUE");
+    }
+    else{
+        console.log("False Code");
+    }
     console.log(formData);
+    
+}
+function isValidPhoneNumber(phone) {
+    const pattern = /^[+]{1}(?:[0-9\-\\(\\)\\/.]\s?){6,15}[0-9]{1}$/;
+    const phoneNumber=phone.toString();
+    if (!phoneNumber) {
+        return "false";
+    }
+ 
+    // Return true if the phone number
+    // matched the Regex
+    if (pattern.test(phoneNumber)) {
+        return "true";
+    } else {
+        return "false";
+    }
 }
