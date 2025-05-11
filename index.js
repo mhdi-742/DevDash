@@ -7,7 +7,12 @@ function sendContactEmail(event) {
         message: message.value,
         phone: phone.value,
     };
-
+    const s=toString(formData.phone);
+    if(s.length!=10)
+    {
+        alert("10 digit no pls");
+    }
+    
     //Validation logic
 
     console.log(formData);
