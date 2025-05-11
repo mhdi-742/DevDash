@@ -16,6 +16,12 @@ function sendContactEmail(event) {
     else{
         console.log("False Code");
     }
+    const phoneumber=phone.toString();
+        if(phoneumber.length!=13)
+        {
+            alert('use 10 digit number')
+        }
+
 }
 function isValidPhoneNumber(phone) {
     const pattern = /^[+]{1}(?:[0-9\-\\(\\)\\/.]\s?){6,15}[0-9]{1}$/;
