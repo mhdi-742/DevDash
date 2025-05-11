@@ -16,8 +16,6 @@ function sendContactEmail(event) {
     else{
         console.log("False Code");
     }
-    console.log(formData);
-    
 }
 function isValidPhoneNumber(phone) {
     const pattern = /^[+]{1}(?:[0-9\-\\(\\)\\/.]\s?){6,15}[0-9]{1}$/;
